@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:i_am_cooked/components/Buttons.dart';
+import 'package:i_am_cooked/pages/home_page.dart';
+import 'package:i_am_cooked/pages/main_page.dart';
 // import 'package:i_am_cooked/components/squaretitle.dart';
 import 'SignUp.dart';
 import 'package:i_am_cooked/components/textfield.dart';
@@ -92,7 +94,9 @@ class LoginPage extends StatelessWidget {
         
                 //signin
                 Mybutton(
-                  onTap: signUserIn,
+                  onTap: (){
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => MainPage()));
+                  },
                 ),
         
                 const SizedBox(
