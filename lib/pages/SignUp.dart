@@ -3,6 +3,7 @@ import 'package:i_am_cooked/components/ButSinUp.dart';
 import 'package:i_am_cooked/pages/login.dart';
 
 import '../components/textfield.dart';
+import 'main_page.dart';
 
 class Signup extends StatelessWidget {
   Signup({super.key,});
@@ -86,7 +87,7 @@ class Signup extends StatelessWidget {
 
                     SignUp(
                       onTap: () {
-                        SignUp(onTap: () {},); // Call the sign-up function
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => MainPage()));
                       },
                     ),
 
